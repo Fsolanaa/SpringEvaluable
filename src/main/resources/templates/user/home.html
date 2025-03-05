@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Home Usuario</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<style>
+		body {
+			background-color: #f8f9fa;
+		}
+
+		.navbar {
+			background-color: #343a40;
+		}
+
+		.navbar a {
+			color: white !important;
+		}
+
+		.panel-usuario {
+			background-color: white;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+			width: 80%;
+			max-width: 600px;
+		}
+
+		.btn-primary {
+			background-color: #007bff;
+			border-color: #007bff;
+		}
+
+		.btn-primary:hover {
+			background-color: #0069d9;
+			border-color: #0062cc;
+		}
+
+		.btn-danger {
+			background-color: #dc3545;
+			border-color: #dc3545;
+		}
+
+		.btn-danger:hover {
+			background-color: #c82333;
+			border-color: #bd2130;
+		}
+	</style>
+</head>
+
+<body class="d-flex flex-column vh-100 bg-light">
+<!-- Barra de navegación centrada horizontalmente -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">Panel de Usuario</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Proyectos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Tareas</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- Contenido principal en la parte inferior, centrado horizontalmente -->
+<div class="d-flex flex-grow-1 align-items-center justify-content-center">
+	<div class="text-center p-4 bg-white border rounded shadow-sm panel-usuario">
+		<h1 class="mb-3">Bienvenido, Usuario</h1>
+		<p class="mb-4">Este es tu panel de usuario.</p>
+		<div class="d-grid gap-2">
+			<a href="/user/proyectos" class="btn btn-primary btn-lg">Proyectos</a>
+			<a href="/user/tareas" class="btn btn-primary btn-lg">Tareas</a>
+			<a href="/registro" class="btn btn-primary btn-lg">Gestionar Usuarios</a>
+			<a href="/admin/dashboard" class="btn btn-primary btn-lg">Dashboard admin</a>
+		</div>
+		<form action="/logout" method="post" class="mt-4">
+			<button type="submit" class="btn btn-danger btn-lg w-100">Cerrar Sesión</button>
+		</form>
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
