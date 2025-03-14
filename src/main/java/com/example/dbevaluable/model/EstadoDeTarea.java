@@ -1,7 +1,7 @@
 package com.example.dbevaluable.model;
 
 public enum EstadoDeTarea {
-        Pendiente,
+    Pendiente,
     En_Curso,
     Completada
 }
